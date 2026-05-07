@@ -10,6 +10,10 @@
 </p>
 
 <p align="center">
+  <strong>🇬🇧 English</strong> · <a href="./README.es.md">🇪🇸 Español</a>
+</p>
+
+<p align="center">
   <a href="https://specialkeys.vercel.app">🌐 Live Demo</a> ·
   <a href="#-features">Features</a> ·
   <a href="#-getting-started">Getting Started</a> ·
@@ -60,14 +64,6 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
-
-### Deploy to Vercel
-
-```bash
-npx vercel
-```
-
-Or import the repo at [vercel.com/new](https://vercel.com/new) — zero configuration required.
 
 ---
 
