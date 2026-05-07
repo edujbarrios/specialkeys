@@ -243,7 +243,7 @@ export default function GlobalSearch() {
       {/* No results */}
       {open && query.trim() && results.length === 0 && (
         <div className="absolute top-full left-0 right-0 z-50 bg-[#1e1e1e] border border-[#2c2c2c] border-t-0 rounded-b-2xl shadow-2xl px-4 py-6 text-center text-[#9e9e9e] text-sm">
-          No results for "<span className="text-white">{query}</span>"
+          No results for &quot;<span className="text-white">{query}</span>&quot;
         </div>
       )}
     </div>

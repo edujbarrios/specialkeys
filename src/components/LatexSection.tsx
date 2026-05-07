@@ -49,7 +49,7 @@ export default function LatexSection() {
       />
 
       {activeData.length === 0 ? (
-        <p className="text-[#9e9e9e] text-sm py-8 text-center">No results for "{search}"</p>
+        <p className="text-[#9e9e9e] text-sm py-8 text-center">No results for &quot;{search}&quot;</p>
       ) : (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2">
           {activeData.map((item) => (

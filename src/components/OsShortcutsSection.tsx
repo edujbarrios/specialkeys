@@ -108,7 +108,7 @@ export default function OsShortcutsSection() {
       {/* Grid */}
       {filtered.length === 0 ? (
         <p className="text-[#9e9e9e] text-sm py-8 text-center">
-          No shortcuts found for "{search}"
+          No shortcuts found for &quot;{search}&quot;
         </p>
       ) : (
         <div className="grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-2">
