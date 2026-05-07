@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import SpecialCharsSection from "@/components/SpecialCharsSection";
 import LatexSection from "@/components/LatexSection";
+import OsShortcutsSection from "@/components/OsShortcutsSection";
+import GlobalSearch from "@/components/GlobalSearch";
 
 export default function Home() {
   return (
@@ -38,11 +40,14 @@ export default function Home() {
           </h1>
 
           <p className="text-lg text-[#9e9e9e] max-w-2xl leading-relaxed">
-            Every special character, Unicode symbol, and LaTeX command — one click to copy.
-            No more hunting through OS menus or character maps.
+            Every special character, Unicode symbol, LaTeX command, and OS keyboard shortcut —
+            one click to copy. No more hunting through character maps.
           </p>
 
-          <div className="flex flex-wrap gap-3 justify-center mt-2">
+          {/* Global search */}
+          <GlobalSearch />
+
+          <div className="flex flex-wrap gap-3 justify-center">
             <a
               href="#chars"
               className="px-5 py-2.5 bg-[#BB86FC] text-black font-semibold rounded-xl hover:bg-[#a06ce0] transition-colors text-sm"
@@ -55,15 +60,21 @@ export default function Home() {
             >
               LaTeX Commands
             </a>
+            <a
+              href="#shortcuts"
+              className="px-5 py-2.5 bg-[#1e1e1e] text-white border border-[#2c2c2c] font-medium rounded-xl hover:border-[#FFB74D] hover:text-[#FFB74D] transition-colors text-sm"
+            >
+              ⌨ OS Shortcuts
+            </a>
           </div>
 
           {/* Stats bar */}
-          <div className="flex flex-wrap gap-6 justify-center mt-4 text-sm text-[#9e9e9e]">
+          <div className="flex flex-wrap gap-6 justify-center mt-2 text-sm text-[#9e9e9e]">
             {[
               ["200+", "Special Characters"],
               ["100+", "LaTeX Commands"],
+              ["120+", "OS Shortcuts"],
               ["7", "Character Categories"],
-              ["6", "LaTeX Categories"],
             ].map(([n, label]) => (
               <div key={label} className="flex flex-col items-center gap-0.5">
                 <span className="text-2xl font-bold text-white">{n}</span>
@@ -84,6 +95,12 @@ export default function Home() {
 
         {/* LaTeX */}
         <LatexSection />
+
+        {/* Divider */}
+        <div className="h-px bg-gradient-to-r from-transparent via-[#2c2c2c] to-transparent" />
+
+        {/* OS Shortcuts */}
+        <OsShortcutsSection />
       </main>
 
       {/* Footer */}

@@ -25,6 +25,12 @@ export default function Header() {
             LaTeX
           </a>
           <a
+            href="#shortcuts"
+            className="px-3 py-1.5 text-sm text-[#9e9e9e] hover:text-white hover:bg-[#1e1e1e] rounded-lg transition-colors"
+          >
+            Shortcuts
+          </a>
+          <a
             href="https://github.com/edujbarrios/specialkeys"
             target="_blank"
             rel="noopener noreferrer"
