@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#121212"/>
+  <rect x="1" y="1" width="62" height="62" rx="13" fill="none" stroke="#BB86FC" stroke-width="2" opacity="0.7"/>
+  <!-- Key rows -->
+  <!-- Row 1 -->
+  <rect x="8"  y="14" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.4"/>
+  <rect x="19" y="14" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.4"/>
+  <rect x="30" y="14" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.4"/>
+  <rect x="41" y="14" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.4"/>
+  <rect x="52" y="14" width="4" height="8" rx="2" fill="#BB86FC" opacity="0.4"/>
+  <!-- Row 2 -->
+  <rect x="8"  y="25" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.7"/>
+  <rect x="19" y="25" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.7"/>
+  <rect x="30" y="25" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.7"/>
+  <rect x="41" y="25" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.7"/>
+  <rect x="52" y="25" width="4" height="8" rx="2" fill="#BB86FC" opacity="0.7"/>
+  <!-- Row 3 -->
+  <rect x="8"  y="36" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.5"/>
+  <rect x="19" y="36" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.5"/>
+  <rect x="30" y="36" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.5"/>
+  <rect x="41" y="36" width="8" height="8" rx="2" fill="#BB86FC" opacity="0.5"/>
+  <rect x="52" y="36" width="4" height="8" rx="2" fill="#BB86FC" opacity="0.5"/>
+  <!-- Spacebar -->
+  <rect x="12" y="47" width="40" height="6" rx="3" fill="#BB86FC" opacity="0.85"/>
+</svg>

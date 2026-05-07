@@ -5,8 +5,10 @@ import { specialCharsData } from "@/data/specialChars";
 import CharCard from "./CharCard";
 import TabBar from "./TabBar";
 import SearchBar from "./SearchBar";
+import { useLocale } from "@/contexts/LocaleContext";
 
 export default function SpecialCharsSection() {
+  const { t } = useLocale();
   const [activeCategory, setActiveCategory] = useState(specialCharsData[0].id);
   const [search, setSearch] = useState("");
 
@@ -33,12 +35,12 @@ export default function SpecialCharsSection() {
     <section id="chars" className="flex flex-col gap-5">
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
         <h2 className="text-xl font-semibold text-white">
-          Special Characters
+          {t("section_chars_title")}
         </h2>
         <SearchBar
           value={search}
           onChange={setSearch}
-          placeholder="Search by name, char, unicode…"
+          placeholder={t("section_chars_search")}
         />
       </div>
 
@@ -50,9 +52,9 @@ export default function SpecialCharsSection() {
       />
 
       {activeData.length === 0 ? (
-        <p className="text-[#9e9e9e] text-sm py-8 text-center">No results for &quot;{search}&quot;</p>
+        <p className="text-[#9e9e9e] text-sm py-8 text-center">{t("section_chars_none")} &quot;{search}&quot;</p>
       ) : (
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] gap-2">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(90px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(110px,1fr))] gap-2">
           {activeData.map((item) => (
             <CharCard key={item.unicode + item.char} item={item} />
           ))}

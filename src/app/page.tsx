@@ -1,10 +1,14 @@
+"use client";
+
 import Header from "@/components/Header";
 import SpecialCharsSection from "@/components/SpecialCharsSection";
 import LatexSection from "@/components/LatexSection";
 import OsShortcutsSection from "@/components/OsShortcutsSection";
 import GlobalSearch from "@/components/GlobalSearch";
+import { useLocale } from "@/contexts/LocaleContext";
 
 export default function Home() {
+  const { t } = useLocale();
   return (
     <div className="min-h-screen bg-[#121212] text-[#e1e1e1]">
       <Header />
@@ -13,11 +17,11 @@ export default function Home() {
         {/* Hero */}
         <section className="flex flex-col items-center text-center gap-5 pt-6">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#BB86FC]/10 border border-[#BB86FC]/30 rounded-full text-[#BB86FC] text-xs font-medium">
-            <span>⌨</span> Open Source &amp; Dark Mode
+            <span>⌨️</span> {t("hero_badge")}
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl">
-            Tired of pressing{" "}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight max-w-3xl">
+            {t("hero_title_pre")}{" "}
             <span className="relative inline-block">
               <span className="text-[#BB86FC]">Alt+Cmd</span>
               <svg
@@ -36,12 +40,11 @@ export default function Home() {
                 />
               </svg>
             </span>
-            {" "}for special characters?
+            {" "}{t("hero_title_post")}
           </h1>
 
-          <p className="text-lg text-[#9e9e9e] max-w-2xl leading-relaxed">
-            Every special character, Unicode symbol, LaTeX command, and OS keyboard shortcut —
-            one click to copy. No more hunting through character maps.
+          <p className="text-base sm:text-lg text-[#9e9e9e] max-w-2xl leading-relaxed">
+            {t("hero_sub")}
           </p>
 
           {/* Global search */}
@@ -52,29 +55,29 @@ export default function Home() {
               href="#chars"
               className="px-5 py-2.5 bg-[#BB86FC] text-black font-semibold rounded-xl hover:bg-[#a06ce0] transition-colors text-sm"
             >
-              Browse Characters →
+            {t("hero_btn_chars")}
             </a>
             <a
               href="#latex"
               className="px-5 py-2.5 bg-[#1e1e1e] text-white border border-[#2c2c2c] font-medium rounded-xl hover:border-[#03DAC6] hover:text-[#03DAC6] transition-colors text-sm"
             >
-              LaTeX Commands
+              {t("hero_btn_latex")}
             </a>
             <a
               href="#shortcuts"
               className="px-5 py-2.5 bg-[#1e1e1e] text-white border border-[#2c2c2c] font-medium rounded-xl hover:border-[#FFB74D] hover:text-[#FFB74D] transition-colors text-sm"
             >
-              ⌨ OS Shortcuts
+              ⌨ {t("hero_btn_shortcuts")}
             </a>
           </div>
 
           {/* Stats bar */}
           <div className="flex flex-wrap gap-6 justify-center mt-2 text-sm text-[#9e9e9e]">
             {[
-              ["200+", "Special Characters"],
-              ["100+", "LaTeX Commands"],
-              ["120+", "OS Shortcuts"],
-              ["7", "Character Categories"],
+              ["200+", t("stat_chars")],
+              ["100+", t("stat_latex")],
+              ["120+", t("stat_shortcuts")],
+              ["7",    t("stat_cats")],
             ].map(([n, label]) => (
               <div key={label} className="flex flex-col items-center gap-0.5">
                 <span className="text-2xl font-bold text-white">{n}</span>
@@ -109,7 +112,7 @@ export default function Home() {
           <div className="flex items-center gap-2">
             <span>⌨</span>
             <span>
-              <span className="text-white font-medium">SpecialKeys</span> — made with ♥ by{" "}
+              <span className="text-white font-medium">SpecialKeys</span> — {t("footer_made")}{" "}
               <a
                 href="https://github.com/edujbarrios"
                 target="_blank"
@@ -130,7 +133,7 @@ export default function Home() {
               GitHub
             </a>
             <span>·</span>
-            <span>Open Source · MIT License</span>
+            <span>{t("footer_oss")}</span>
           </div>
         </div>
       </footer>

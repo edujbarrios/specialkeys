@@ -5,8 +5,10 @@ import { latexData } from "@/data/latexCommands";
 import LatexCard from "./LatexCard";
 import TabBar from "./TabBar";
 import SearchBar from "./SearchBar";
+import { useLocale } from "@/contexts/LocaleContext";
 
 export default function LatexSection() {
+  const { t } = useLocale();
   const [activeCategory, setActiveCategory] = useState(latexData[0].id);
   const [search, setSearch] = useState("");
 
@@ -32,12 +34,12 @@ export default function LatexSection() {
     <section id="latex" className="flex flex-col gap-5">
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 justify-between">
         <h2 className="text-xl font-semibold text-white">
-          LaTeX Commands
+          {t("section_latex_title")}
         </h2>
         <SearchBar
           value={search}
           onChange={setSearch}
-          placeholder="Search by command or name…"
+          placeholder={t("section_latex_search")}
         />
       </div>
 
@@ -49,9 +51,9 @@ export default function LatexSection() {
       />
 
       {activeData.length === 0 ? (
-        <p className="text-[#9e9e9e] text-sm py-8 text-center">No results for &quot;{search}&quot;</p>
+        <p className="text-[#9e9e9e] text-sm py-8 text-center">{t("section_latex_none")} &quot;{search}&quot;</p>
       ) : (
-        <div className="grid grid-cols-[repeat(auto-fill,minmax(180px,1fr))] gap-2">
+        <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-2">
           {activeData.map((item) => (
             <LatexCard key={item.command} item={item} />
           ))}
