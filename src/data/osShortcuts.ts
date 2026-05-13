@@ -108,7 +108,6 @@ const winAlt: KeyCombo[] = [
   { os:"windows", category:"math",       keys:["Alt","8711"],  result:"∇",  label:"Nabla"             },
   { os:"windows", category:"math",       keys:["Alt","8712"],  result:"∈",  label:"Element Of"        },
   { os:"windows", category:"math",       keys:["Alt","8719"],  result:"∏",  label:"Product (Pi)"      },
-  { os:"windows", category:"math",       keys:["Alt","8711"],  result:"∇",  label:"Nabla"             },
   { os:"windows", category:"math",       keys:["Alt","8713"],  result:"∉",  label:"Not Element"       },
   { os:"windows", category:"math",       keys:["Alt","8834"],  result:"⊂",  label:"Subset"            },
   { os:"windows", category:"math",       keys:["Alt","8835"],  result:"⊃",  label:"Superset"          },
